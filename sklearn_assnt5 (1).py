@@ -16,26 +16,26 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.svm import LinearSVC
 
-data = pd.read_csv('waseemDataSet.csv')
+#data = pd.read_csv('waseemDataSet.csv')
 
-data.head()
+#data.head()
 
-data[['tweet', 'labels']] = data['Mixed'].str.rsplit(' ', 1, expand=True)
+#data[['tweet', 'labels']] = data['Mixed'].str.rsplit(' ', 1, expand=True)
 
-data.head()
+#data.head()
 
-data = data.drop('Mixed', axis=1)
-data.head()
+#data = data.drop('Mixed', axis=1)
+#data.head()
 
-train, test_data = train_test_split(data, test_size=0.2, random_state=1, stratify=data["labels"])
+#train, test_data = train_test_split(data, test_size=0.2, random_state=1, stratify=data["labels"])
 
-print("Train set:")
-print(train.value_counts(normalize=True))
-print("Test set:")
-print(test_data.value_counts(normalize=True))
+#print("Train set:")
+#print(train.value_counts(normalize=True))
+#print("Test set:")
+#print(test_data.value_counts(normalize=True))
 
-train.to_csv("train.csv", index=False)
-test_data.to_csv("test.csv", index=False)
+#train.to_csv("train.csv", index=False)
+#test_data.to_csv("test.csv", index=False)
 
 # Load the dataset
 train = pd.read_csv("train.csv")
